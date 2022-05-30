@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import static java.lang.Float.isNaN;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,21 +28,29 @@ public class Main {
                 play = false;
             }
             else if(input.equalsIgnoreCase("v")){
-                System.out.println("Type een cijfer in van 0 t/m 9");
-
-                int number = scanner.nextInt();
-                if(number < 10){
-                    String result = translator.translate(number);
-                    System.out.println("De vertaling van " + number + " is " + result);
-                    break;
-                }else{
-                    System.out.println(ongeldig);
-                }
+                break;
 
             }
             else{
                 System.out.println(ongeldig);
             }
+        }
+
+        while (play) {
+            System.out.println("Type een cijfer in van 0 t/m 9");
+
+
+            int number = scanner.nextInt();
+
+            if (number < 10 ) {
+                String result = translator.translate(number);
+                System.out.println("De vertaling van " + number + " is " + result);
+                break;
+            } else {
+                System.out.println(ongeldig + ", probeer opnieuw");
+            }
+
+
         }
 
 
