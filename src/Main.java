@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import static java.lang.Float.isNaN;
-
 public class Main {
 
     public static void main(String[] args) {
